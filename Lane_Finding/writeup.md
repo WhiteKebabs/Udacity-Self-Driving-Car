@@ -1,47 +1,31 @@
 #**Finding Lane Lines on the Road** 
 
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Finding Lane Lines on the Road**
 
 The goals / steps of this project are the following:
-* Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
-
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
+* Using the algorithms and concepts taught in Lesson 2, create a pipeline that will detect lane lines.
+* Write a written report on the approaches I took, difficulties I encountered, and possible improvements.
 
 ---
 
 ### Reflection
 
-###1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+###1. Approach
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
-
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
-
-
-###2. Identify potential shortcomings with your current pipeline
+The overall approach I took in order to detect lane lines is as follows:
+* Convert RGB image to greyscale
+* Create two separate traingle masks for the left and right lanes and apply them on the greyscale image
+* Apply the Uncanny algorithm to detect edges on the lanes
+* Apply the Hough Lines algorithm supplied to us as a helper function to extract potential lines from the images
+* Combine the left and right Hough Line extractions
+* Add the combined Hough lines extraction to the original image
 
 
-One potential shortcoming would be what would happen when ... 
 
-Another shortcoming could be ...
+###2. Difficulties
 
 
-###3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+###3. Possible Improvements
