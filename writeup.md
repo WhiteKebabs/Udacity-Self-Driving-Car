@@ -23,8 +23,8 @@ The overall approach I took in order to detect lane lines is as follows:
 * Combine the left and right Hough Line extractions
 * Add the combined Hough lines extraction to the original image
 
-[image1]: ./output_images/left_uncanny.jpg "Left Uncanny Mask"
-[image2]: ./output_images/right_uncanny.jpg "Right Uncanny Mask"
+[image1]: ./output_images/left_canny.jpg "Left Uncanny Mask"
+[image2]: ./output_images/right_canny.jpg "Right Uncanny Mask"
 
 [image3]: ./output_images/left_hough.jpg "Left Hough Lines"
 [image4]: ./output_images/right_hough.jpg "Right Hough Lines"
